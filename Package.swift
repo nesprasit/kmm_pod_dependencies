@@ -13,12 +13,7 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(name: "shared", path: "./shared.xcframework"),
-        .target(name: "dependency",
-            dependencies: [
-              .product(name: "SocketIO", package: "SocketIO")
-            ],
-            path: "./dependency/dependency.xcframework"
-        ),
+        .binaryTarget(name: "dependency", path: "./dependency/dependency.xcframework"),
     ]
 )
 
