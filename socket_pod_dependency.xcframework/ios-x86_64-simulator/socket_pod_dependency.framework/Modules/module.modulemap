@@ -1,0 +1,11 @@
+framework module socket_pod_dependency {
+  umbrella header "socket_pod_dependency-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module socket_pod_dependency.Swift {
+  header "socket_pod_dependency-Swift.h"
+  requires objc
+}
