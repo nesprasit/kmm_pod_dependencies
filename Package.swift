@@ -8,9 +8,6 @@ let package = Package(
         .library(name: "shared",targets: ["shared"]),
         .library(name: "dependency",targets: ["dependency"]),
     ],
-    dependencies: [
-        .package(url: "https://github.com/socketio/socket.io-client-swift", .upToNextMinor(from: "16.0.0"))
-    ],
     targets: [
         .binaryTarget(name: "shared", path: "./shared.xcframework"),
         .binaryTarget(name: "dependency", path: "./dependency/dependency.xcframework"),
