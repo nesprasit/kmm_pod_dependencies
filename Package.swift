@@ -3,27 +3,17 @@ import PackageDescription
 
 let package = Package(
     name: "shared",
-    platforms: [
-        .iOS(.v13)
-    ],
+    platforms: [.iOS(.v13)]
     products: [
-        .library(
-            name: "shared",
-            targets: ["shared"]
-        ),
-        .library(
-            name: "socket_pod_dependency",
-            targets: ["socket_pod_dependency"]
-        ),
+        .library(name: "shared",targets: ["shared"]),
+        .library(name: "dependency",targets: ["dependency"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/socketio/socket.io-client-swift", .upToNextMinor(from: "16.0.0"))
     ],
     targets: [
-        .binaryTarget(
-            name: "shared",
-            path: "./shared.xcframework"
-        ),
-        .binaryTarget(
-            name: "socket_pod_dependency",
-            path: "./socket_pod_dependency.xcframework"
-        ),
+        .binaryTarget(name: "shared", path: "./shared.xcframework"),
+        .binaryTarget(name: "dependency", path: "./dependency/dependency.xcframework"),
     ]
 )
+

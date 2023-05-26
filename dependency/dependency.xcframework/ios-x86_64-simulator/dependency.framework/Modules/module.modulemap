@@ -1,0 +1,11 @@
+framework module dependency {
+  umbrella header "dependency-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module dependency.Swift {
+  header "dependency-Swift.h"
+  requires objc
+}
