@@ -6,14 +6,14 @@ let package = Package(
     platforms: [.iOS(.v13)],
     products: [
         .library(name: "shared",targets: ["shared"]),
-        .library(name: "dependency",targets: ["dependency"]),
+        .library(name: "chatcone_ios_dependency",targets: ["chatcone_ios_dependency"]),
     ],
     dependencies: [
         .package(url: "https://github.com/socketio/socket.io-client-swift.git", from: "16.0.0"),
     ],
     targets: [
         .binaryTarget(name: "shared", path: "./shared.xcframework"),
-        .binaryTarget(name: "dependency", path: "./dependency/dependency.xcframework"),
+        .binaryTarget(name: "chatcone_ios_dependency", path: "./chatcone_ios_dependency/chatcone_ios_dependency.xcframework"),
     ]
 )
 

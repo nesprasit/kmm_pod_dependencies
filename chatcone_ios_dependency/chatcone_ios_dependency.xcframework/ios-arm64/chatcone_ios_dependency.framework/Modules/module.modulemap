@@ -1,0 +1,11 @@
+framework module chatcone_ios_dependency {
+  umbrella header "chatcone_ios_dependency-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module chatcone_ios_dependency.Swift {
+  header "chatcone_ios_dependency-Swift.h"
+  requires objc
+}
